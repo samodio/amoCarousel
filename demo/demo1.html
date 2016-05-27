@@ -15,6 +15,9 @@
 
 <style type="text/css">
 
+.header {
+	position: relative;
+}
 .container {
 	border: 1px dashed black;
 	padding: 1em;
@@ -22,20 +25,39 @@
 	min-width: 300px;
 }
 
-.carousel {
+#carousel {
 	position: relative;
 	border: 16px solid #888;
 	width: 80%; 
 	margin: 0 auto;
 }
 
-.carousel img {
+#carousel img {
 	position: absolute; top:0; left:0;
 	z-index: -10;
 	width: 100%; 
 	vertical-align: bottom;
 }
 
+#caro-forward, #caro-back {
+	z-index: 2;
+	position: absolute;
+	top:50%;
+}
+#caro-back {
+ 	left:1%;
+}
+#caro-forward {
+	right:1%;
+}
+.dir-button {
+		font-size: 3em;
+		font-weight: bold;
+		color: #FFF;
+}
+.dir-button:hover {
+	cursor:pointer; cursor:hand;
+}
 
 @media only screen and (min-width: 400px) {
 	.container {
@@ -61,10 +83,7 @@
 <script type="text/javascript" >
 
 $(document).ready(function () {
-
-	var carousel = new Carousel({delaytime:3000});
-	carousel.start();
-
+	new Carousel({delaytime:2000}).start();
 });
 </script>
 
@@ -75,11 +94,12 @@ $(document).ready(function () {
 	<div class="container">
 		<h1>Amo Picture Carousel</h1>
 		<div class="header">
-		    <div class="carousel">
+		    <div id="carousel">
 		        <img src="img/picture1-10X4.jpg" alt=""/>
 		        <img src="img/picture2-10X4.jpg" alt=""/>
 		        <img src="img/picture3-10X4.jpg" alt=""/>
 		        <img src="img/picture4-10X4.jpg" alt=""/>
+		        <div><span id="caro-back" class="dir-button">&lt;</span><span id="caro-forward" class="dir-button">&gt;</span></div>
 		    </div>
 		</div>
 		<div class="content">
