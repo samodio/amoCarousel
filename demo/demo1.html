@@ -9,81 +9,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="css/normalize.css">	
+        <link rel="stylesheet" href="css/carousel.css">	
 
 		<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
 		<script type="text/javascript" src="js/amoCarousel.js"></script>
 
-<style type="text/css">
-
-.header {
-	position: relative;
-}
-.container {
-	border: 1px dashed black;
-	padding: 1em;
-	width: 100%;
-	min-width: 300px;
-}
-
-#carousel {
-	position: relative;
-	border: 16px solid #888;
-	width: 80%; 
-	margin: 0 auto;
-}
-
-#carousel img {
-	position: absolute; top:0; left:0;
-	z-index: -10;
-	width: 100%; 
-	vertical-align: bottom;
-}
-
-#caro-forward, #caro-back {
-	z-index: 2;
-	position: absolute;
-	top:50%;
-}
-#caro-back {
- 	left:1%;
-}
-#caro-forward {
-	right:1%;
-}
-.dir-button {
-		font-size: 3em;
-		font-weight: bold;
-		color: #FFF;
-}
-.dir-button:hover {
-	cursor:pointer; cursor:hand;
-}
-
-@media only screen and (min-width: 400px) {
-	.container {
-		width: 90%;
-		margin: 0 auto;
-	}
-}
-
-@media only screen and (min-width: 700px) {
-	.container {
-		width: 75%;
-	}
-}
-
-@media only screen and (min-width: 1400px) {
-	.container {
-		width: 60%;
-	}
-}	
-
-</style>
 
 <script type="text/javascript" >
 
 $(document).ready(function () {
-	new Carousel({delaytime:2000}).start();
+	new Carousel({delaytime:1000}).start();
 });
 </script>
 
