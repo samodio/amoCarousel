@@ -24,7 +24,7 @@ function Carousel(obj) {
 		$("#caro-back").delay(delaytime * self.total).show(30).click(function() {
 				self.back();
 		});
-		$("#caro-forward").delay(delaytime * self.total).show(30).click(function() {
+		$("#caro-forward").delay(delaytime * self.total).click(function() {
 				self.forward();
 		});	
     }
@@ -36,6 +36,12 @@ function Carousel(obj) {
 	  		  	elem = $("#carousel img").get(this.index);
 	  		  	$(elem).animate({"z-index":"1"}, 0);
 	  	}
+	  	if (this.index < this.total) {
+	  		$("#caro-forward").show(30);
+	  	} 
+	  	if (this.index == 0) {
+	  		$("#caro-back").hide(30);
+	  	}
 	}
 
   this.forward = function() {
@@ -44,6 +50,11 @@ function Carousel(obj) {
 	  		  	$(elem).animate({"z-index":"-1"}, 0);
 	  		  	elem = $("#carousel img").get(this.index);
 	  		  	$(elem).animate({"z-index":"1"}, 0);
+	  	}
+	  	if (this.index > 0) {
+	  		$("#caro-back").show(30);
+	  	} else if (this.index == this.total -1) {
+	  		$("#caro-forward").hide(30);
 	  	}
   }
   return self;

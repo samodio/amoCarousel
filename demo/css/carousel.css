@@ -1,0 +1,66 @@
+/* Carousel core styles */
+
+#carousel {
+	position: relative;
+	border: 16px solid #888;
+	width: 80%; 
+	margin: 0 auto;
+}
+
+#carousel img {
+	position: absolute; top:0; left:0;
+	z-index: -1;
+	width: 100%; 
+	vertical-align: bottom;
+}
+
+#caro-forward, #caro-back {
+	z-index: 2;
+	position: absolute;
+	top:50%;
+}
+#caro-back {
+ 	left:1%;
+}
+#caro-forward {
+	right:1%;
+}
+.dir-button {
+		font-size: 3em;
+		font-weight: bold;
+		color: #FFF;
+}
+.dir-button:hover {
+	cursor:pointer; cursor:hand;
+}
+
+@media only screen and (min-width: 400px) {
+	.container {
+		width: 90%;
+		margin: 0 auto;
+	}
+}
+
+
+/* Responsive Layout */
+
+
+.container {
+	border: 1px dashed black;
+	padding: 1em;
+	width: 100%;
+	min-width: 300px;
+}
+
+
+@media only screen and (min-width: 700px) {
+	.container {
+		width: 75%;
+	}
+}
+
+@media only screen and (min-width: 1400px) {
+	.container {
+		width: 60%;
+	}
+}	
